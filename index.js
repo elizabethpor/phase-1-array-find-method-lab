@@ -24,11 +24,15 @@
 // letFoundItemYear = record.find(isW);
 //LOG: {year: '2015', result: 'W'}
 
-function superbowlWin(record) {
-    return record.result === 'W';
+function superbowlWin(records) {
+    let foundRecordObject = records.find(record => record.result === 'W')
+    if (foundRecordObject) {
+        return foundRecordObject.year;
+    // } else {
+    //     return undefined;
+    }
+    return undefined;
 }
-let foundRecordYear = record.find(superbowlWin);
-console.log(foundRecordYear);
 
 
 
